@@ -1,0 +1,53 @@
+
+<%- include ( 'header' ) ; -%>
+
+  <body>
+
+    <div class = "container" >
+      
+      <h1 class = "title" >
+        
+        Edit ToDo
+
+      </h1>
+
+      <div class = "addToDo" >
+        
+        <form action = "/edit/save" method = "POST" >
+
+          <input type="hidden"  name = "id" value = "<%= getEditTodo .id %>" >
+
+
+          <label>
+              
+              Title
+
+          </label>
+          
+          <input type = "text" name = "name" value = "<%= getEditTodo .name %>" >
+
+          <label>
+              
+              Content
+
+          </label>
+
+          <textarea name = "about" ><%= getEditTodo .about %></textarea>
+
+          <input class = "createBtn" type = "submit" value = "Confirm" >
+
+        </form>
+
+        <a class = "addBtn" href = "/" >
+          
+          Back
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </body>
+
+</html>

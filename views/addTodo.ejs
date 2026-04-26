@@ -1,0 +1,50 @@
+
+<%- include ( 'header' ) ; -%>
+
+  <body>
+
+    <div class = "container" >
+      
+      <h1 class = "title" >
+        
+        Add ToDo
+
+      </h1>
+
+      <div class = "addToDo" >
+        
+        <form action = "/createTodo" method = "POST" >
+
+          <label>
+              
+              Title
+
+          </label>
+          
+          <input type = "text" name = "name" >
+
+          <label>
+              
+              Content
+
+          </label>
+
+          <textarea name = "about" ></textarea>
+
+          <input class = "createBtn" type = "submit" value = "Create ToDo" >
+
+        </form>
+
+        <a class = "addBtn" href = "/" >
+          
+          Back
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </body>
+
+<%- include ( 'footer' ) ; -%>

@@ -1,0 +1,66 @@
+
+<%- include ( 'header' ) ; -%>
+
+  <body>
+
+    <div class = "container" >
+      
+      <h1 class = "title" >
+        
+        Things To Do
+
+      </h1>
+
+      <a class = "addBtn" href = "/addTodo" >
+        
+        +Add
+
+      </a>
+
+      <div class = "todos" >
+        
+        <ol>
+          
+          <% todos .forEach ( function ( todo ) { %>
+
+            <li>
+            
+              <a class = "name light " >
+        
+                <%= todo .name %>
+
+              </a>
+
+              <a class = "light" href = "/todo/<%= todo .id %>" >
+        
+                <img src="link.svg">
+
+              </a>
+
+              <a class = "light" href = "/edit/<%= todo .id %>" >
+        
+                <img src="edit.svg">
+
+              </a>
+
+              <a class = "light" href = "/delete/<%= todo .id %>" >
+        
+                <img src="delete.svg">
+
+              </a>
+
+            </li>
+
+          <% } ) ; %>
+
+          
+
+        </ol>
+
+      </div>
+
+    </div>
+
+  </body>
+
+<%- include ( 'footer' ) ; -%>
