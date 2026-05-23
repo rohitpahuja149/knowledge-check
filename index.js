@@ -155,6 +155,22 @@ app .get (
 
 )
 
+// configure the route to reset all todos
+
+app .get (
+
+	"/reset" ,
+
+	( req , res ) => {
+
+		todos = [] ;
+
+		res .redirect ( "/" ) ;
+
+	}
+
+) ;
+
 // configure the route to delete a specific todo
 
 app .get (
